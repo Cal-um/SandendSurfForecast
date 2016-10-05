@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AFB2EE01DA26FAF002AF764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB2EDF1DA26FAF002AF764 /* AppDelegate.swift */; };
+		3AFB2EE51DA26FAF002AF764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFB2EE31DA26FAF002AF764 /* Main.storyboard */; };
+		3AFB2EE71DA26FAF002AF764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AFB2EE61DA26FAF002AF764 /* Assets.xcassets */; };
+		3AFB2EEA1DA26FAF002AF764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFB2EE81DA26FAF002AF764 /* LaunchScreen.storyboard */; };
+		3AFB2EF21DA26FED002AF764 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB2EF11DA26FED002AF764 /* MainViewController.swift */; };
+		3AFB2EF41DA2704C002AF764 /* MagicSeaweedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB2EF31DA2704C002AF764 /* MagicSeaweedClient.swift */; };
+		3AFB2EF61DA27092002AF764 /* MagicSeaweedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB2EF51DA27092002AF764 /* MagicSeaweedConstants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3AFB2EDC1DA26FAF002AF764 /* SandendDreams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SandendDreams.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AFB2EDF1DA26FAF002AF764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3AFB2EE41DA26FAF002AF764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3AFB2EE61DA26FAF002AF764 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AFB2EE91DA26FAF002AF764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3AFB2EEB1DA26FAF002AF764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AFB2EF11DA26FED002AF764 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3AFB2EF31DA2704C002AF764 /* MagicSeaweedClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicSeaweedClient.swift; sourceTree = "<group>"; };
+		3AFB2EF51DA27092002AF764 /* MagicSeaweedConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicSeaweedConstants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AFB2ED91DA26FAF002AF764 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AFB2ED31DA26FAF002AF764 = {
+			isa = PBXGroup;
+			children = (
+				3AFB2EDE1DA26FAF002AF764 /* SandendDreams */,
+				3AFB2EDD1DA26FAF002AF764 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3AFB2EDD1DA26FAF002AF764 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AFB2EDC1DA26FAF002AF764 /* SandendDreams.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AFB2EDE1DA26FAF002AF764 /* SandendDreams */ = {
+			isa = PBXGroup;
+			children = (
+				3AFB2EDF1DA26FAF002AF764 /* AppDelegate.swift */,
+				3AFB2EF11DA26FED002AF764 /* MainViewController.swift */,
+				3AFB2EF31DA2704C002AF764 /* MagicSeaweedClient.swift */,
+				3AFB2EF51DA27092002AF764 /* MagicSeaweedConstants.swift */,
+				3AFB2EE31DA26FAF002AF764 /* Main.storyboard */,
+				3AFB2EE61DA26FAF002AF764 /* Assets.xcassets */,
+				3AFB2EE81DA26FAF002AF764 /* LaunchScreen.storyboard */,
+				3AFB2EEB1DA26FAF002AF764 /* Info.plist */,
+			);
+			path = SandendDreams;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AFB2EDB1DA26FAF002AF764 /* SandendDreams */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AFB2EEE1DA26FAF002AF764 /* Build configuration list for PBXNativeTarget "SandendDreams" */;
+			buildPhases = (
+				3AFB2ED81DA26FAF002AF764 /* Sources */,
+				3AFB2ED91DA26FAF002AF764 /* Frameworks */,
+				3AFB2EDA1DA26FAF002AF764 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SandendDreams;
+			productName = SandendDreams;
+			productReference = 3AFB2EDC1DA26FAF002AF764 /* SandendDreams.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AFB2ED41DA26FAF002AF764 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Calum Harris";
+				TargetAttributes = {
+					3AFB2EDB1DA26FAF002AF764 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = B3H446T9U7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3AFB2ED71DA26FAF002AF764 /* Build configuration list for PBXProject "SandendDreams" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AFB2ED31DA26FAF002AF764;
+			productRefGroup = 3AFB2EDD1DA26FAF002AF764 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AFB2EDB1DA26FAF002AF764 /* SandendDreams */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AFB2EDA1DA26FAF002AF764 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AFB2EEA1DA26FAF002AF764 /* LaunchScreen.storyboard in Resources */,
+				3AFB2EE71DA26FAF002AF764 /* Assets.xcassets in Resources */,
+				3AFB2EE51DA26FAF002AF764 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AFB2ED81DA26FAF002AF764 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AFB2EF21DA26FED002AF764 /* MainViewController.swift in Sources */,
+				3AFB2EF41DA2704C002AF764 /* MagicSeaweedClient.swift in Sources */,
+				3AFB2EF61DA27092002AF764 /* MagicSeaweedConstants.swift in Sources */,
+				3AFB2EE01DA26FAF002AF764 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3AFB2EE31DA26FAF002AF764 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AFB2EE41DA26FAF002AF764 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3AFB2EE81DA26FAF002AF764 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AFB2EE91DA26FAF002AF764 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3AFB2EEC1DA26FAF002AF764 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3AFB2EED1DA26FAF002AF764 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AFB2EEF1DA26FAF002AF764 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B3H446T9U7;
+				INFOPLIST_FILE = SandendDreams/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RenaldoMoon.SandendDreams;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3AFB2EF01DA26FAF002AF764 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B3H446T9U7;
+				INFOPLIST_FILE = SandendDreams/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RenaldoMoon.SandendDreams;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AFB2ED71DA26FAF002AF764 /* Build configuration list for PBXProject "SandendDreams" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AFB2EEC1DA26FAF002AF764 /* Debug */,
+				3AFB2EED1DA26FAF002AF764 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AFB2EEE1DA26FAF002AF764 /* Build configuration list for PBXNativeTarget "SandendDreams" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AFB2EEF1DA26FAF002AF764 /* Debug */,
+				3AFB2EF01DA26FAF002AF764 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AFB2ED41DA26FAF002AF764 /* Project object */;
+}
