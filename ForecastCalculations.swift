@@ -10,6 +10,8 @@ import Foundation
 
 struct ForecastCalculations {
 	
+	// These are not yet implemented -- For future use.
+	
 	func calculateMinMaxAverage(dayArray: [Forecast]) -> (Double, Double) {
 		let dayMaxAverage = (dayArray.map { $0.maxWaveHeight }.reduce(0.0) { $0 + $1 })
 			/ Double(dayArray.count)

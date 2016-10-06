@@ -11,11 +11,11 @@
 		3AFB2EE51DA26FAF002AF764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFB2EE31DA26FAF002AF764 /* Main.storyboard */; };
 		3AFB2EE71DA26FAF002AF764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AFB2EE61DA26FAF002AF764 /* Assets.xcassets */; };
 		3AFB2EEA1DA26FAF002AF764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AFB2EE81DA26FAF002AF764 /* LaunchScreen.storyboard */; };
-		3AFB2EF21DA26FED002AF764 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB2EF11DA26FED002AF764 /* MainViewController.swift */; };
 		3AFB2EF41DA2704C002AF764 /* MagicSeaweedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB2EF31DA2704C002AF764 /* MagicSeaweedClient.swift */; };
 		3AFB2EF61DA27092002AF764 /* MagicSeaweedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB2EF51DA27092002AF764 /* MagicSeaweedConstants.swift */; };
 		3AFB2EFA1DA53520002AF764 /* ForecastCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB2EF91DA53520002AF764 /* ForecastCalculations.swift */; };
 		3AFB2EFC1DA66806002AF764 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB2EFB1DA66806002AF764 /* ForecastViewController.swift */; };
+		3AFB2EFE1DA68242002AF764 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB2EFD1DA68242002AF764 /* ForecastTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +25,11 @@
 		3AFB2EE61DA26FAF002AF764 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AFB2EE91DA26FAF002AF764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AFB2EEB1DA26FAF002AF764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AFB2EF11DA26FED002AF764 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3AFB2EF31DA2704C002AF764 /* MagicSeaweedClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicSeaweedClient.swift; sourceTree = "<group>"; };
 		3AFB2EF51DA27092002AF764 /* MagicSeaweedConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicSeaweedConstants.swift; sourceTree = "<group>"; };
 		3AFB2EF91DA53520002AF764 /* ForecastCalculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForecastCalculations.swift; path = ../ForecastCalculations.swift; sourceTree = "<group>"; };
 		3AFB2EFB1DA66806002AF764 /* ForecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
+		3AFB2EFD1DA68242002AF764 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +63,12 @@
 			isa = PBXGroup;
 			children = (
 				3AFB2EF91DA53520002AF764 /* ForecastCalculations.swift */,
+				3AFB2EFB1DA66806002AF764 /* ForecastViewController.swift */,
 				3AFB2EDF1DA26FAF002AF764 /* AppDelegate.swift */,
-				3AFB2EF11DA26FED002AF764 /* MainViewController.swift */,
 				3AFB2EF31DA2704C002AF764 /* MagicSeaweedClient.swift */,
 				3AFB2EF51DA27092002AF764 /* MagicSeaweedConstants.swift */,
+				3AFB2EFD1DA68242002AF764 /* ForecastTableViewCell.swift */,
 				3AFB2EE31DA26FAF002AF764 /* Main.storyboard */,
-				3AFB2EFB1DA66806002AF764 /* ForecastViewController.swift */,
 				3AFB2EE61DA26FAF002AF764 /* Assets.xcassets */,
 				3AFB2EE81DA26FAF002AF764 /* LaunchScreen.storyboard */,
 				3AFB2EEB1DA26FAF002AF764 /* Info.plist */,
@@ -149,10 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AFB2EF21DA26FED002AF764 /* MainViewController.swift in Sources */,
 				3AFB2EFA1DA53520002AF764 /* ForecastCalculations.swift in Sources */,
 				3AFB2EF41DA2704C002AF764 /* MagicSeaweedClient.swift in Sources */,
 				3AFB2EF61DA27092002AF764 /* MagicSeaweedConstants.swift in Sources */,
+				3AFB2EFE1DA68242002AF764 /* ForecastTableViewCell.swift in Sources */,
 				3AFB2EE01DA26FAF002AF764 /* AppDelegate.swift in Sources */,
 				3AFB2EFC1DA66806002AF764 /* ForecastViewController.swift in Sources */,
 			);
