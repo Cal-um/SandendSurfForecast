@@ -15,6 +15,7 @@
 		3AFB2EF41DA2704C002AF764 /* MagicSeaweedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB2EF31DA2704C002AF764 /* MagicSeaweedClient.swift */; };
 		3AFB2EF61DA27092002AF764 /* MagicSeaweedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB2EF51DA27092002AF764 /* MagicSeaweedConstants.swift */; };
 		3AFB2EFA1DA53520002AF764 /* ForecastCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB2EF91DA53520002AF764 /* ForecastCalculations.swift */; };
+		3AFB2EFC1DA66806002AF764 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB2EFB1DA66806002AF764 /* ForecastViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3AFB2EF31DA2704C002AF764 /* MagicSeaweedClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicSeaweedClient.swift; sourceTree = "<group>"; };
 		3AFB2EF51DA27092002AF764 /* MagicSeaweedConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicSeaweedConstants.swift; sourceTree = "<group>"; };
 		3AFB2EF91DA53520002AF764 /* ForecastCalculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForecastCalculations.swift; path = ../ForecastCalculations.swift; sourceTree = "<group>"; };
+		3AFB2EFB1DA66806002AF764 /* ForecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				3AFB2EF31DA2704C002AF764 /* MagicSeaweedClient.swift */,
 				3AFB2EF51DA27092002AF764 /* MagicSeaweedConstants.swift */,
 				3AFB2EE31DA26FAF002AF764 /* Main.storyboard */,
+				3AFB2EFB1DA66806002AF764 /* ForecastViewController.swift */,
 				3AFB2EE61DA26FAF002AF764 /* Assets.xcassets */,
 				3AFB2EE81DA26FAF002AF764 /* LaunchScreen.storyboard */,
 				3AFB2EEB1DA26FAF002AF764 /* Info.plist */,
@@ -151,6 +154,7 @@
 				3AFB2EF41DA2704C002AF764 /* MagicSeaweedClient.swift in Sources */,
 				3AFB2EF61DA27092002AF764 /* MagicSeaweedConstants.swift in Sources */,
 				3AFB2EE01DA26FAF002AF764 /* AppDelegate.swift in Sources */,
+				3AFB2EFC1DA66806002AF764 /* ForecastViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
