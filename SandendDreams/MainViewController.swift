@@ -10,80 +10,120 @@ import UIKit
 
 class MainViewConrtroller: UIViewController {
 	
+	@IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
+	@IBOutlet weak var mainTitle: UILabel!
+	@IBOutlet weak var waveHeightsNowTitle: UILabel!
+	@IBOutlet weak var minTitle: UILabel!
+	@IBOutlet weak var maxTitle: UILabel!
+	@IBOutlet weak var ftMaxTitle: UILabel!
+	@IBOutlet weak var ftMinTitle: UILabel!
+	@IBOutlet weak var flipACoin: UILabel!
+	@IBOutlet weak var heads: UILabel!
+	@IBOutlet weak var tails: UILabel!
+	@IBOutlet weak var backgroundBox: UIView!
+	@IBOutlet weak var boxView: UIImageView!
+	@IBOutlet weak var noInternetBoxView: UIImageView!
+	
 	@IBOutlet weak var minHeightLabel: UILabel!
 	@IBOutlet weak var maxHeightLabel: UILabel!
+
 	
+	override func viewDidLoad() {
+		labelLoadingState()
+		loadingSpinner.startAnimating()
+	}
+	
+	override var prefersStatusBarHidden: Bool {
+		return true
+	}
 	
 	override func viewDidAppear(_ animated: Bool) {
 		
-			WebService().load(resource: Forecast.parseAll) { result in
-				
-				// there are always 40 results that come back from the load. So there are 8 forecasts per day for 5 days.
+		WebService().load(resource: Forecast.parseAll) { [unowned self] data in
 			
-				let sortedByTime = result?.sorted (by: { $0.timeStamp < $1.timeStamp })
-				let latestForecast = sortedByTime?.filter( { $0.timeStamp <= Date() }).last
-				
-			DispatchQueue.main.async { _ in
+				// there are always 40 results that come back from the load. So there are 8 forecasts per day for 5 days.
+			switch data {
+			case .success(let result):
+				let sortedByTime = result.sorted (by: { $0.timeStamp < $1.timeStamp })
+				let latestForecast = sortedByTime.filter( { $0.timeStamp <= Date() }).last
+				DispatchQueue.main.async { _ in
+				self.loadingSpinner.stopAnimating()
+				self.labelShowDataState()
 				self.minHeightLabel.text = String(describing: latestForecast!.minWaveHeight)
 				self.maxHeightLabel.text = String(describing: latestForecast!.maxWaveHeight)
 			}
-		}
-	}
-}
-
-
-struct ForecastCalculations {
-	
-	func calculateMinMaxAverage(dayArray: [Forecast]) -> (Double, Double) {
-		let dayMaxAverage = (dayArray.map { $0.maxWaveHeight }.reduce(0.0) { $0 + $1 })
-			/ Double(dayArray.count)
-		let dayMinAverage =  (dayArray.map { $0.minWaveHeight }.reduce(0.0) { $0 + $1 }) / Double(dayArray.count)
-		return (dayMaxAverage, dayMinAverage)
-	}
-	
-	func getDayOfWeekFrom(dayArray: [Forecast]) -> String? {
-		let date = dayArray.first?.timeStamp
-		let calendar = Calendar(identifier: .gregorian)
-		let weekday = calendar.component(.weekday, from: date!)
-		
-		switch weekday {
-		case 2: return "Monday"
-		case 3: return "Tuesday"
-		case 4: return "Wednesday"
-		case 5: return "Thursday"
-		case 6: return "Friday"
-		case 7: return "Saturday"
-		case 1: return "Sunday"
-		default: return nil
-		}
-	}
-	
-	enum Day {
-		case today, day2, day3, day4, day5
-	}
-	
-	func splitDaysIntoArrays(dayRequired: Day, sortedByTime: [Forecast]) -> [Forecast] {
-		
-		var range = 0...0
-		
-		switch dayRequired {
-		case .today: range = (0...7)
-		case .day2: range = 8...15
-		case .day3: range = 16...23
-		case .day4: range = 24...31
-		case .day5: range = 32...39
-		}
-		
-		let todaysArray = sortedByTime.enumerated().map { (index, element) -> Forecast? in
-			if range ~= index {
-				return element
-			} else {
-				return nil
+			case .failure(let error):
+				switch error {
+				case .noInternetConnection:
+					DispatchQueue.main.async { _ in
+						self.alertNoInternet()
+					}
+				default: print("error")
+				}
 			}
-			}.flatMap{$0}
-		return todaysArray
+		}
 	}
+	
+	func alertNoInternet() {
+		let ac = UIAlertController(title: "Whoops", message: "No Internet Connection", preferredStyle: .alert)
+		let okButton = UIAlertAction(title: "OK", style: .cancel, handler: { _ in self.labelNoInternetConnectionState() })
+		ac.addAction(okButton)
+		present(ac, animated: true, completion: nil)
+	}
+	
+	func labelLoadingState() {
+		mainTitle.isHidden = true
+		waveHeightsNowTitle.isHidden = true
+		minTitle.isHidden = true
+		maxTitle.isHidden = true
+		ftMaxTitle.isHidden = true
+		ftMinTitle.isHidden = true
+		flipACoin.isHidden = true
+		heads.isHidden = true
+		tails.isHidden = true
+		minHeightLabel.isHidden = true
+		maxHeightLabel.isHidden = true
+		boxView.isHidden = true
+		noInternetBoxView.isHidden = true
+	}
+	
+	func labelNoInternetConnectionState() {
+		loadingSpinner.stopAnimating()
+		mainTitle.isHidden = false
+		waveHeightsNowTitle.isHidden = true
+		minTitle.isHidden = true
+		maxTitle.isHidden = true
+		ftMaxTitle.isHidden = true
+		ftMinTitle.isHidden = true
+		flipACoin.isHidden = false
+		heads.isHidden = false
+		tails.isHidden = false
+		minHeightLabel.isHidden = true
+		maxHeightLabel.isHidden = true
+		boxView.isHidden = true
+		noInternetBoxView.isHidden = false
+	}
+	
+	func labelShowDataState() {
+		mainTitle.isHidden = false
+		waveHeightsNowTitle.isHidden = false
+		minTitle.isHidden = false
+		maxTitle.isHidden = false
+		ftMaxTitle.isHidden = false
+		ftMinTitle.isHidden = false
+		flipACoin.isHidden = true
+		heads.isHidden = true
+		tails.isHidden = true
+		minHeightLabel.isHidden = false
+		maxHeightLabel.isHidden = false
+		boxView.isHidden = false
+		noInternetBoxView.isHidden = true
+	}
+	
+
 }
+
+
 
 
 

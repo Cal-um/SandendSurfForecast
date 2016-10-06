@@ -35,19 +35,19 @@ let url = URL(string: "http://magicseaweed.com/api/\(MagicSeaweedConstants.APIKe
 
 struct Resource<A> {
 	let url: URL
-	let parse: (Data) -> A?
+	let parse: (Data) -> Result<A>
 }
 
 extension Resource {
 	
-	init(url: URL, parseJSON: @escaping (Any) -> A?) {
+	init(url: URL, parseJSON: @escaping (Any) -> Result<A>) {
 		self.url = url
-		self.parse = { data in
+		self.parse = { data	in
 			do {
 				let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
 				return parseJSON(jsonData)
 			} catch {
-				fatalError("Error parsing JSON")
+				fatalError("Error parsing data")
 			}
 		}
 	}
@@ -56,17 +56,41 @@ extension Resource {
 extension Forecast {
 	
 	static let parseAll = Resource<[Forecast]>(url: url, parseJSON: { jsonData in
-		guard let json = jsonData as? [JSONDictionary] else { print("MOW") ; return nil }
-		return json.flatMap { Forecast(dictionary: $0) }
+		guard let json = jsonData as? [JSONDictionary] else { return .failure(.errorParsingJSON)  }
+		return .success(json.flatMap { Forecast(dictionary: $0) })
 	})
 }
 
 
 final class WebService {
-	func load<A>(resource: Resource<A>, completion: @escaping (A?) -> ()) {
-		URLSession.shared.dataTask(with: resource.url) { data, _, _ in
+	func load<A>(resource: Resource<A>, completion: @escaping (Result<A>) -> ()) {
+		URLSession.shared.dataTask(with: resource.url) { data, response, error in
+			
+			guard error == nil else {
+				if (error as! NSError).domain == NSURLErrorDomain && ((error as! NSError).code == NSURLErrorNotConnectedToInternet || (error as! NSError).code == NSURLErrorTimedOut) {
+					return completion(.failure(.noInternetConnection))
+				} else {
+					return completion(.failure(.returnedError(error!))) }
+				}
+			guard let statusCode = (response as? HTTPURLResponse)?.statusCode , statusCode >= 200 && statusCode <= 299 else {
+				
+				return completion(.failure(.invalidStatusCode("Request returned status code other than 2xx \(response)")))
+			}
 			let result = data.flatMap(resource.parse)
-			completion(result)
-			}.resume()
+			completion(result!)
+		}.resume()
 	}
+}
+
+enum Result<T> {
+	case success(T)
+	case failure(NetworkingErrors)
+}
+
+enum NetworkingErrors: Error {
+	case errorParsingJSON
+	case noInternetConnection
+	case dataReturnedNil
+	case returnedError(Error)
+	case invalidStatusCode(String)
 }
