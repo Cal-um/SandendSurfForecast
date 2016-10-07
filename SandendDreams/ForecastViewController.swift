@@ -72,6 +72,7 @@ class ForecastViewController: UIViewController {
 		let ac = UIAlertController(title: "Whoops", message: "No Internet Connection", preferredStyle: .alert)
 		let okButton = UIAlertAction(title: "OK", style: .cancel, handler: { _ in
 		self.tableView.reloadData()
+		self.refreshControl.endRefreshing()
 		})
 		ac.addAction(okButton)
 		present(ac, animated: true, completion: nil)
